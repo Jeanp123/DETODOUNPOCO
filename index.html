@@ -180,17 +180,44 @@ nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
    DXN
 ════════════════════════════════════════ */
 .dxn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1.1rem}
-.dxn-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all 0.28s cubic-bezier(.22,1,.36,1)}
+.dxn-card{
+  background:var(--bg2);
+  border:1.5px solid var(--border);
+  border-radius:var(--r);
+
+  overflow:visible;
+
+  transition:
+    transform .28s cubic-bezier(.22,1,.36,1),
+    box-shadow .28s;
+
+  will-change:transform;
+}
 .dxn-card:hover:not(.dis){box-shadow:var(--shadow2);transform:translateY(-4px)}
 .dxn-card.dis{opacity:0.48}
-.dxn-img-wrap{position:relative;background:var(--gold-bg);height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border)}
+.dxn-img-wrap{position:relative;background:var(--gold-bg);height:250px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--border)}
 .dxn-img-wrap img{width:100%;height:100%;object-fit:contain;padding:0.5rem;transition:transform 0.4s}
 .dxn-card:hover .dxn-img-wrap img{transform:scale(1.06)}
 .dxn-img-fallback{font-size:3.5rem;transition:transform 0.3s}
 .dxn-card:hover .dxn-img-fallback{transform:scale(1.1) rotate(5deg)}
 .dxn-body{padding:1rem}
 .dxn-name{font-size:0.88rem;font-weight:700;color:var(--text);margin-bottom:2px}
-.dxn-desc{font-size:0.73rem;color:var(--text3);margin-bottom:8px;line-height:1.45}
+.dxn-desc{
+  font-size: 0.80rem;
+  font-weight: 500;
+  color: #5a5a5a;
+
+  text-align: justify;
+
+  line-height: 1.8;
+
+  letter-spacing: .25px;
+  word-spacing: 1.5px;
+
+  margin: 8px 0 12px;
+
+  opacity: .95;
+}
 .dxn-price{font-size:1.05rem;font-weight:800;color:var(--gold);margin-bottom:10px}
 .btn-dxn{width:100%;background:var(--text);color:#fff;border:none;padding:0.52rem;border-radius:8px;font-size:0.79rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:6px}
 .btn-dxn:hover{background:#333}
@@ -584,22 +611,297 @@ let DB = {
   ],
   dxn:[
     // img: URL de imagen real del producto. Si no hay, se usa emoji.
-    {id:'d1',name:'Ganoderma Cápsulas',emoji:'🍄',price:65,desc:'Hongo reishi en cápsulas · bienestar general',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/capsules/RG_GL_CAPSULES-500x500.jpg',stock:true},
-    {id:'d2',name:'Café Gano Classic', emoji:'☕',price:45,desc:'Café negro con Ganoderma · energía natural',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/beverages/COFFEE/black_coffee-500x500.jpg',stock:true},
-    {id:'d3',name:'Spirulina',         emoji:'💚',price:55,desc:'Suplemento de microalgas · proteína vegetal',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/supplements/spirulina-500x500.jpg',stock:true},
-    {id:'d4',name:'Morinzhi',          emoji:'🧃',price:80,desc:'Jugo de Noni · antioxidante poderoso',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/beverages/JUICE/morinzhi-500x500.jpg',stock:false},
-    {id:'d5',name:"Lion's Mane",       emoji:'🦁',price:70,desc:'Hongo melena de león · claridad mental',
-     img:'',stock:true},
-    {id:'d6',name:'Zhi Mocha',         emoji:'🍫',price:40,desc:'Café moca con Ganoderma · sabor intenso',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/beverages/COFFEE/mocha-500x500.jpg',stock:true},
-    {id:'d7',name:'Gano Tea',          emoji:'🍵',price:30,desc:'Té verde con Ganoderma · relajación',
-     img:'https://www.dxn2u.com/image/cache/catalog/DXN/beverages/TEA/gano_tea-500x500.jpg',stock:true},
-    {id:'d8',name:'Cocozhi',           emoji:'🥥',price:38,desc:'Bebida de coco con Ganoderma',
-     img:'https://dxncafesaludable.pe/wp-content/uploads/2022/06/cocozhi.jpg',stock:true},
+{id:"DXN001",
+ name:"DXN Lingzhi Coffee 3 in 1",
+ emoji:"☕",
+ price:97.00,
+ desc:"Café instantáneo con Ganoderma que ayuda a brindar energía, concentración y antioxidantes para el día a día.",
+ img:'https://i5.walmartimages.com/seo/DXN-Lingzhi-Coffee-3-in-1-Ganoderma-Coffee-20-Pack_a771b18e-49cf-4719-a05f-579dafc78c74.4dff5fe513a7eafd81c3b171647382fc.jpeg',
+ stock:true},
+
+{id:"DXN002",
+ name:"DXN Lingzhi Black Coffee",
+ emoji:"☕",
+ price:97.00,
+ desc:"Café negro con Ganoderma ideal para quienes buscan energía natural, sabor intenso y apoyo antioxidante.",
+ img:'https://tse3.mm.bing.net/th/id/OIP.oLfSpJVRDFvn0RXS1PRx5AAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+ stock:true},
+
+{id:"DXN003",
+ name:"DXN Spirulina Cereal 30 sobres",
+ emoji:"💚",
+ price:209.00,
+ desc:"Cereal nutritivo con espirulina que aporta proteínas, vitaminas y minerales para complementar la alimentación diaria.",
+ img:'https://http2.mlstatic.com/D_NQ_NP_906820-MLA85202600021_052025-O.webp',
+ stock:true},
+
+{id:"DXN004",
+ name:"DXN Cocozhi",
+ emoji:"🥥",
+ price:124.00,
+ desc:"Bebida de cacao con Ganoderma que combina energía, antioxidantes y un sabor cremoso y reconfortante.",
+ img:'https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3373/PMP20000831365/full_image-1.png',
+ stock:true},
+
+{id:"DXN005",
+ name:"DXN Vita Café 6 en 1",
+ emoji:"☕",
+ price:124.00,
+ desc:"Café funcional con Ganoderma y ginseng que ayuda a mejorar la vitalidad, concentración y rendimiento diario.",
+  img:'https://tse1.mm.bing.net/th/id/OIP.eITekJfStvT5Fhq7exKcTAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+ stock:true},
+
+{id:"DXN006",
+ name:"DXN Linzhi Black Coffee Mix",
+ emoji:"☕",
+ price:97.00,
+ desc:"Mezcla de café y Ganoderma que aporta energía y antioxidantes con un sabor equilibrado y suave.",
+  img:'https://tse4.mm.bing.net/th/id/OIP.pYw8ZaxMXnrx5FS7CGS2MgHaJr?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+ stock:true},
+
+{id:"DXN007",
+ name:"DXN White Coffee Zhino",
+ emoji:"☕",
+ price:124.00,
+ desc:"Café estilo cappuccino con Ganoderma que brinda energía y una experiencia cremosa y aromática.",
+img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkDVq8hmNBfAwWXzwd1MgleQCLcBGAs/s1600/white-coffe-zhino-WEB.jpg',
+ stock:true},
+
+{id:"DXN008",
+ name:"DXN ZhiTea Infusion",
+ emoji:"🍵",
+ price:59.00,
+ desc:"Infusión con Ganoderma ideal para relajarse, hidratarse y aportar antioxidantes naturales.",
+ img:'https://tse4.mm.bing.net/th/id/OIP.51ZHoSWAmAQBAX8a7CkZpQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+ stock:true},
+
+{id:"DXN009",
+ name:"DXN Lion's Mane",
+ emoji:"🦁",
+ price:89.00,
+ desc:"Hongo Melena de León tradicionalmente utilizado para apoyar la memoria, concentración y claridad mental.",
+ img:'https://tse1.mm.bing.net/th/id/OIP.6WwNLPjmNF1Fgd4N5HIBvgHaJo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+ stock:true},
+
+{id:"DXN010",
+ name:"DXN Zhi Mocha Mix",
+ emoji:"🍫",
+ price:117.00,
+ desc:"Bebida de café, cacao y Ganoderma que ayuda a aportar energía y antioxidantes con sabor intenso.",
+ img:'https://th.bing.com/th/id/R.10c615d7b349e6ca78146a56829db430?rik=7qY%2fMv5bpCPw%2bg&riu=http%3a%2f%2fnegociodxn.com%2fwp-content%2fuploads%2f2023%2f03%2fFB373_DXN_Ootea_ZhiMocha_Mix.jpg&ehk=UIrWgF4iLy4spaKq0mGYW2p19jGyaFzcBnbihcQZpek%3d&risl=&pid=ImgRaw&r=0',
+ stock:true},
+
+{id:"DXN011",
+ name:"DXN Oocha (Oolong Tea)",
+ emoji:"🍵",
+ price:124.00,
+ desc:"Té Oolong con Ganoderma conocido por su contenido antioxidante y sensación refrescante.",
+ img:'https://negociodxn.com/wp-content/uploads/2021/01/oocha_sachet-e1611894248317.jpg',
+ stock:true},
+
+// {id:"DXN012",
+//  name:"DXN Morinzyme Noni",
+//  emoji:"🧃",
+//  price:104.00,
+//  desc:"Bebida fermentada de noni y enzimas que ayuda a complementar la digestión y el bienestar general.",
+//  stock:true},
+
+// {id:"DXN013",
+//  name:"DXN Gano Massage Oil",
+//  emoji:"🛀",
+//  price:75.00,
+//  desc:"Aceite corporal ideal para masajes relajantes y aliviar la sensación de tensión muscular.",
+//  stock:true},
+
+// {id:"DXN014",
+//  name:"DXN Spirulina Coffee",
+//  emoji:"☕",
+//  price:104.00,
+//  desc:"Combinación de café y espirulina que aporta energía y nutrientes para apoyar el rendimiento diario.",
+//  stock:true},
+
+// {id:"DXN015",
+//  name:"DXN Ganozhi Soap",
+//  emoji:"🧼",
+//  price:27.00,
+//  desc:"Jabón con Ganoderma que ayuda a limpiar, refrescar y cuidar la piel diariamente.",
+//  stock:true},
+
+// {id:"DXN016",
+//  name:"DXN Zhi Mint",
+//  emoji:"🍬",
+//  price:208.00,
+//  desc:"Caramelos de menta con Ganoderma que refrescan el aliento y brindan una experiencia herbal agradable.",
+//  stock:true},
+
+// {id:"DXN017",
+//  name:"DXN Aloe Vera Aqua Gel",
+//  emoji:"💧",
+//  price:103.00,
+//  desc:"Gel hidratante de Aloe Vera ideal para refrescar, humectar y suavizar la piel.",
+//  stock:true},
+
+// {id:"DXN018",
+//  name:"DXN Ganozhi Toothpaste",
+//  emoji:"🪥",
+//  price:57.00,
+//  desc:"Pasta dental con Ganoderma que ayuda a mantener una limpieza bucal fresca y agradable.",
+//  stock:true},
+
+// {id:"DXN019",
+//  name:"DXN Apple Enzyme Drink",
+//  emoji:"🍏",
+//  price:149.00,
+//  desc:"Bebida fermentada de manzana con enzimas naturales que ayuda a complementar la digestión.",
+//  stock:true},
+
+// {id:"DXN020",
+//  name:"DXN Coffee Civattino",
+//  emoji:"☕",
+//  price:329.90,
+//  desc:"Café premium de fermentación natural con sabor intenso y aroma suave para amantes del café gourmet.",
+//  stock:true},
+
+// {id:"DXN021",
+//  name:"DXN Zhi Mocha (variación)",
+//  emoji:"🍫",
+//  price:118.00,
+//  desc:"Mezcla de café y Ganoderma con notas de cacao que aporta energía y sabor reconfortante.",
+//  stock:true},
+
+// {id:"DXN022",
+//  name:"DXN NutriZhi Soya Mix",
+//  emoji:"🥣",
+//  price:159.90,
+//  desc:"Mezcla de soya con Ganoderma rica en nutrientes y proteínas vegetales para complementar la dieta.",
+//  stock:true},
+
+// {id:"DXN023",
+//  name:"DXN Lemonzhi Tea",
+//  emoji:"🍋",
+//  price:81.00,
+//  desc:"Té con limón y Ganoderma refrescante y rico en antioxidantes naturales.",
+//  stock:true},
+
+// {id:"DXN024",
+//  name:"DXN Lingzhi Tea Latte",
+//  emoji:"☕",
+//  price:124.00,
+//  desc:"Té latte con Ganoderma de sabor suave y cremoso ideal para momentos de relajación.",
+//  stock:true},
+
+// {id:"DXN025",
+//  name:"DXN Multipurpose Seasoning",
+//  emoji:"🍳",
+//  price:99.00,
+//  desc:"Sazonador natural que ayuda a realzar el sabor de las comidas de forma práctica.",
+//  stock:true},
+
+// {id:"DXN026",
+//  name:"DXN Oozhi Tea x30",
+//  emoji:"🍵",
+//  price:48.00,
+//  desc:"Té Oolong en sobres ideal para acompañar una rutina ligera y refrescante.",
+//  stock:true},
+
+// {id:"DXN027",
+//  name:"DXN Zhi Café Classic",
+//  emoji:"☕",
+//  price:99.00,
+//  desc:"Café clásico con Ganoderma que aporta energía y antioxidantes para el consumo diario.",
+//  stock:true},
+
+// {id:"DXN028",
+//  name:"DXN Spirulina (variante)",
+//  emoji:"💚",
+//  price:155.00,
+//  desc:"Espirulina rica en proteínas, vitaminas y minerales para complementar la nutrición diaria.",
+//  stock:true},
+
+// {id:"DXN029",
+//  name:"DXN Vita Café 20 packs",
+//  emoji:"☕",
+//  price:97.00,
+//  desc:"Café instantáneo con Ganoderma práctico para brindar energía y concentración durante el día.",
+//  stock:true},
+
+// {id:"DXN030",
+//  name:"DXN Civattino Coffee",
+//  emoji:"☕",
+//  price:97.00,
+//  desc:"Café de fermentación natural con sabor suave y aroma intenso para disfrutar en cualquier momento.",
+//  stock:true},
+
+// {id:"DXN031",
+//  name:"DXN VCO Oil 285ml",
+//  emoji:"🥥",
+//  price:97.00,
+//  desc:"Aceite de coco virgen ideal para cocina, hidratación y cuidado natural del cuerpo.",
+//  stock:true},
+
+// {id:"DXN032",
+//  name:"DXN Non Dairy Creamer",
+//  emoji:"🥛",
+//  price:18.50,
+//  desc:"Crema no láctea que aporta textura cremosa y sabor suave a bebidas calientes.",
+//  stock:true},
+
+// {id:"DXN033",
+//  name:"DXN Oolong Tea Powder 30g",
+//  emoji:"🍵",
+//  price:30.00,
+//  desc:"Polvo de té Oolong rico en antioxidantes y perfecto para bebidas refrescantes.",
+//  stock:true},
+
+// {id:"DXN034",
+//  name:"DXN Aloe V Facial Scrub",
+//  emoji:"💆",
+//  price:95.00,
+//  desc:"Exfoliante facial con Aloe Vera que ayuda a limpiar impurezas y suavizar la piel.",
+//  stock:true},
+
+// {id:"DXN035",
+//  name:"DXN Aloe V Hand & Body Lotion",
+//  emoji:"🧴",
+//  price:84.00,
+//  desc:"Loción corporal hidratante con Aloe Vera ideal para mantener la piel suave y humectada.",
+//  stock:true},
+
+// {id:"DXN036",
+//  name:"DXN Aloe V Hydrating Mask",
+//  emoji:"🧴",
+//  price:99.00,
+//  desc:"Mascarilla hidratante con Aloe Vera que ayuda a refrescar y revitalizar la piel.",
+//  stock:true},
+
+// {id:"DXN037",
+//  name:"DXN Aloe V Nutricare Cream",
+//  emoji:"🧴",
+//  price:113.00,
+//  desc:"Crema nutritiva con Aloe Vera diseñada para hidratar y cuidar la piel diariamente.",
+//  stock:true},
+
+// {id:"DXN038",
+//  name:"DXN Ganozhi Body Foam",
+//  emoji:"🛁",
+//  price:63.00,
+//  desc:"Espuma corporal con Ganoderma que ayuda a limpiar y refrescar la piel suavemente.",
+//  stock:true},
+
+// {id:"DXN039",
+//  name:"DXN Ganozhi Shampoo",
+//  emoji:"🧴",
+//  price:84.00,
+//  desc:"Shampoo con Ganoderma ideal para limpiar el cabello y aportar sensación de frescura.",
+//  stock:true},
+
+// {id:"DXN040",
+//  name:"DXN Ganozhi Soap Extra",
+//  emoji:"🧼",
+//  price:32.00,
+//  desc:"Jabón de Ganoderma para limpieza diaria y cuidado suave de la piel.",
+//  stock:true}
+
   ],
   nispero:[
     {id:'n1',name:'Cajón Extra Pequeño',emoji:'🍊',price:80, cat:'extra',  desc:'~12 kg · calibre premium',stock:true},

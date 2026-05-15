@@ -332,6 +332,34 @@ nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
 .btn-wsp2:hover::before{transform:translateX(0)}
 .btn-wsp2:hover{background:#1cb855}
 
+
+
+/* ════════════════════════════════════════
+   MEJORAS RESPONSIVE + NUEVAS FUNCIONES
+════════════════════════════════════════ */
+#page-streaming{min-height:100vh;background:radial-gradient(circle at 15% 10%,rgba(79,70,229,.18),transparent 30%),radial-gradient(circle at 85% 20%,rgba(236,72,153,.12),transparent 28%),linear-gradient(135deg,#f8fbff,#f4f0ff 48%,#fffaf6)}
+#page-nispero{min-height:100vh;background:radial-gradient(circle at 10% 15%,rgba(34,197,94,.16),transparent 28%),radial-gradient(circle at 90% 10%,rgba(245,158,11,.18),transparent 26%),linear-gradient(135deg,#fbfff8,#eefbea 50%,#fff7e8)}
+.stream-img{width:52px;height:52px;object-fit:cover;border-radius:14px;margin:0 auto 8px;display:block;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.sc-actions{position:relative;z-index:3;display:flex;gap:6px;margin-top:9px;justify-content:center}
+.mini-btn{border:none;border-radius:999px;padding:7px 12px;font-size:.72rem;font-weight:800;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:.2s;background:var(--purple);color:#fff}
+.mini-btn.remove{background:var(--red);box-shadow:0 4px 14px rgba(192,57,43,.18)}
+.mini-btn:hover{transform:translateY(-1px);filter:brightness(.96)}
+.stream-more-box{margin-top:1rem;background:linear-gradient(135deg,#f4f0ff,#eef3ff);border:1px solid rgba(92,63,163,.18);border-radius:var(--r2);padding:1rem}
+.stream-more-title{font-size:.84rem;font-weight:800;color:var(--text);margin-bottom:.25rem}
+.stream-more-text{font-size:.76rem;color:var(--text2);line-height:1.55;margin-bottom:.8rem}
+.stream-month-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.btn-month{border:none;background:#fff;color:var(--purple);border:1.5px solid rgba(92,63,163,.22);padding:.65rem .4rem;border-radius:10px;font-size:.78rem;font-weight:800;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:.2s}
+.btn-month:hover{background:var(--purple);color:#fff;transform:translateY(-1px)}
+.qty-bubble{position:absolute;top:7px;right:7px;min-width:22px;height:22px;padding:0 6px;background:var(--purple);color:#fff;border-radius:999px;font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:4}
+.shop-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 1.2rem;background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:18px;padding:12px;box-shadow:var(--shadow)}
+.search-box{flex:1;min-width:220px;border:1.5px solid var(--border);background:#fff;border-radius:999px;padding:12px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none}.search-box:focus{border-color:var(--gold)}
+.dxn-filter{display:flex;gap:7px;flex-wrap:wrap}.dxn-cat-btn{border:1.5px solid var(--border);background:#fff;color:var(--text2);padding:9px 13px;border-radius:999px;font-size:.78rem;font-weight:700;cursor:pointer}.dxn-cat-btn.active{background:var(--text);color:#fff;border-color:var(--text)}
+.dxn-card.sel{border-color:var(--gold);box-shadow:0 8px 30px rgba(200,150,42,.18)}
+.dxn-cart{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;margin-top:1.5rem}.dxn-cart-head{background:linear-gradient(135deg,#1a1714,#3b3127);color:#fff;padding:.9rem 1.25rem;font-size:.85rem;font-weight:800;display:flex;justify-content:space-between}.dxn-cart-body{padding:1.1rem}.dxn-item{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.83rem}.dxn-item:last-child{border-bottom:none}.dxn-item-name{font-weight:800}.dxn-item-sub{color:var(--text2);font-size:.74rem;margin-top:2px}.dxn-item-price{font-weight:900;color:var(--gold)}
+.unit-switch{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:9px 0}.unit-btn{border:1.5px solid var(--border);background:#fff;border-radius:10px;padding:7px;font-size:.72rem;font-weight:800;cursor:pointer;color:var(--text2)}.unit-btn.active{background:var(--green);border-color:var(--green);color:#fff}.nisp-unit-note{font-size:.69rem;color:var(--text3);margin-bottom:8px}
+@media(max-width:900px){nav{height:auto;min-height:60px;padding:.8rem 1rem;gap:.7rem;justify-content:space-between;flex-wrap:wrap}.logo{font-size:1.05rem}.nav-links{display:flex;order:3;width:100%;gap:7px;overflow-x:auto;padding-bottom:2px}.nav-btn{white-space:nowrap;padding:.45rem .8rem;font-size:.78rem}.admin-btn{font-size:.72rem}.hero{min-height:78vh;padding:4rem 1rem}.hero-cards{grid-template-columns:1fr;max-width:360px}.container{padding:1.25rem .9rem}.sec-wrap h2{font-size:1.65rem}.stream-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dxn-grid,.nisp-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.dxn-img-wrap{height:180px}.gallery-grid{grid-template-columns:1fr 1fr}.promo-live,.combo-bar,.shop-tools{border-radius:16px}.cart-body,.nisp-cart-body,.dxn-cart-body{padding:1rem}.loader-logo{font-size:1.55rem;text-align:center}.loader-subtitle{text-align:center;font-size:.8rem}.ptext{font-size:.95rem}}
+@media(max-width:480px){.stream-grid,.dxn-grid,.nisp-grid{grid-template-columns:1fr}.sc{padding:1rem}.dxn-img-wrap{height:220px}.price-row,.nisp-total-row{align-items:flex-start;gap:8px;flex-direction:column}.gallery-grid{grid-template-columns:1fr}.promo-live{margin:1rem 0}.combo-bar-text{font-size:.95rem}.hero h1{font-size:2.25rem}.hero-sub{font-size:.9rem}.admin-modal{width:100vw}.shop-tools{padding:10px}.search-box{min-width:100%;width:100%}}
+
 /* ════════════════════════════════════════
    ADMIN PANEL
 ════════════════════════════════════════ */
@@ -399,6 +427,7 @@ footer strong{color:rgba(255,255,255,0.65)}
 ════════════════════════════════════════ */
 .hidden{display:none!important}
 @media(max-width:600px){
+  .stream-month-options{grid-template-columns:1fr}
   .hero-cards{grid-template-columns:repeat(3,1fr);gap:0.6rem}
   .hero-card{padding:1rem 0.6rem}
   .hero-card-icon{font-size:1.5rem}
@@ -505,7 +534,9 @@ footer strong{color:rgba(255,255,255,0.65)}
       <p>Suplementos y productos de bienestar natural de alta calidad</p>
     </div>
     <div class="sec-line"></div>
+    <div class="shop-tools reveal reveal-delay-1"><input class="search-box" id="dxn-search" placeholder="🔎 Buscar producto DXN..." oninput="dxnSearch=this.value;renderDXN()"><div class="dxn-filter" id="dxn-filter"></div></div>
     <div class="dxn-grid reveal reveal-delay-1" id="dxn-grid"></div>
+    <div id="dxn-cart-area"><div id="dxn-empty" class="empty-note">👆 Selecciona productos DXN para armar tu pedido</div><div id="dxn-cart" class="dxn-cart hidden"></div></div>
   </div>
 </div>
 
@@ -575,6 +606,7 @@ footer strong{color:rgba(255,255,255,0.65)}
       <div class="a-title">Agregar nueva plataforma</div>
       <label class="a-label">Nombre</label><input class="a-input" id="ns-name" placeholder="Ej: Crunchyroll">
       <label class="a-label">Emoji</label><input class="a-input" id="ns-emo" placeholder="🎌" maxlength="4">
+      <label class="a-label">URL de imagen / logo (opcional)</label><input class="a-input" id="ns-img" placeholder="https://...">
       <label class="a-label">Precio (S/)</label><input class="a-input" id="ns-price" type="number" placeholder="15">
       <button class="btn-save" onclick="addStreaming()">+ Agregar plataforma</button>
       <div class="a-title">Promoción / Oferta del momento</div>
@@ -592,6 +624,7 @@ footer strong{color:rgba(255,255,255,0.65)}
       <label class="a-label">Emoji (si no tienes imagen)</label><input class="a-input" id="nd-emo" placeholder="🍄" maxlength="4">
       <label class="a-label">URL de imagen (opcional)</label><input class="a-input" id="nd-img" placeholder="https://... (deja vacío para usar emoji)">
       <label class="a-label">Descripción corta</label><input class="a-input" id="nd-desc" placeholder="Ej: Cápsula de hongo reishi">
+      <label class="a-label">Categoría</label><select class="a-select" id="nd-cat"><option value="Cafés">Cafés</option><option value="Bebidas e infusiones">Bebidas e infusiones</option><option value="Suplementos">Suplementos</option><option value="Cuidado personal">Cuidado personal</option><option value="Otros">Otros</option></select>
       <label class="a-label">Precio (S/)</label><input class="a-input" id="nd-price" type="number" placeholder="65">
       <button class="btn-save" onclick="addDXN()">+ Agregar producto</button>
     </div>
@@ -979,6 +1012,11 @@ img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkD
 // ESTADO
 // ═══════════════════════════════════════
 let streamSel=[];
+let streamCart={};
+let dxnCart=[];
+let dxnQty={};
+let dxnSearch="";
+let dxnFilter="all";
 let nispCart=[];
 let nispQty={};
 let adminLogged=false;
@@ -1063,6 +1101,8 @@ function showPage(p){
 // STREAMING
 // ═══════════════════════════════════════
 function streamDisc(n){return n>=2?n:0}
+function streamIds(){return Object.keys(streamCart).filter(id=>streamCart[id]>0)}
+function streamCount(){return streamIds().reduce((a,id)=>a+streamCart[id],0)}
 
 function renderPromo(){
   const el=document.getElementById('promo-area');
@@ -1075,105 +1115,161 @@ function renderPromo(){
 }
 
 function renderStreaming(){
-  // combo pills
-  const pills=document.getElementById('combo-pills');
-  if(pills) pills.innerHTML=[2,3,4,5].map(n=>`<div class="cpill">${n} → <strong>-S/${n}</strong></div>`).join('');
-
-  const disc=streamDisc(streamSel.length);
-  const per=streamSel.length>=2?disc/streamSel.length:0;
   const grid=document.getElementById('stream-grid');
   if(!grid)return;
+  const count=streamCount();
+  const disc=streamDisc(count);
   grid.innerHTML=DB.streaming.map(s=>{
-    const sel=streamSel.includes(s.id);
-    const adjP=sel&&disc>0?(s.price-per).toFixed(2):s.price;
-    return `<div class="sc${sel?' sel':''}${!s.stock?' dis':''}" onclick="${s.stock?`toggleStream('${s.id}')`:''}" >
-      <div class="sc-check">✓</div>
-      <div class="sc-inner">
-        <span class="sc-emo">${s.emoji}</span>
+    const qty=streamCart[s.id]||0;
+    const sel=qty>0;
+    const adjP=sel&&disc>0?(s.price-(disc/count)).toFixed(2):s.price;
+    const media=s.img?`<img class="stream-img" src="${s.img}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="sc-emo" style="display:none">${s.emoji}</span>`:`<span class="sc-emo">${s.emoji}</span>`;
+    return `<div class="sc${sel?' sel':''}${!s.stock?' dis':''}">
+      ${qty?`<div class="qty-bubble">×${qty}</div>`:''}
+      <div class="sc-inner" onclick="${s.stock?`addStream('${s.id}')`:''}">
+        ${media}
         <div class="sc-name">${s.name}</div>
         ${!s.stock?'<div class="no-stock-tag">Sin stock</div>':''}
-        ${sel&&disc>0
-          ?`<div class="sc-old">S/ ${s.price}</div><div class="sc-price cut">S/ ${adjP}</div>`
-          :`<div class="sc-price">S/ ${s.price}</div>`}
+        ${sel&&disc>0?`<div class="sc-old">S/ ${s.price}</div><div class="sc-price cut">S/ ${adjP}</div>`:`<div class="sc-price">S/ ${s.price}</div>`}
       </div>
+      ${s.stock&&sel?`<div class="sc-actions"><button class="mini-btn remove" onclick="event.stopPropagation();removeStream('${s.id}')">− Quitar 1 perfil</button></div>`:''}
     </div>`;
   }).join('');
   updateStreamCart();
 }
-
-function toggleStream(id){
-  const i=streamSel.indexOf(id);
-  if(i>=0)streamSel.splice(i,1);else streamSel.push(id);
-  renderStreaming();
-}
-
+function addStream(id){streamCart[id]=(streamCart[id]||0)+1;renderStreaming()}
+function removeStream(id){streamCart[id]=Math.max(0,(streamCart[id]||0)-1);if(!streamCart[id])delete streamCart[id];renderStreaming()}
+function toggleStream(id){removeStream(id)}
 function updateStreamCart(){
-  const empty=document.getElementById('stream-empty');
-  const cart=document.getElementById('stream-cart');
-  if(!cart)return;
-  if(!streamSel.length){empty.classList.remove('hidden');cart.classList.add('hidden');return;}
+  const empty=document.getElementById('stream-empty'), cart=document.getElementById('stream-cart'); if(!cart)return;
+  const ids=streamIds(), count=streamCount();
+  if(!count){empty.classList.remove('hidden');cart.classList.add('hidden');return;}
   empty.classList.add('hidden');cart.classList.remove('hidden');
-  const orig=streamSel.reduce((s,id)=>s+(DB.streaming.find(x=>x.id===id)?.price||0),0);
-  const disc=streamDisc(streamSel.length);
-  const total=orig-disc;
+  const orig=ids.reduce((sum,id)=>sum+(DB.streaming.find(x=>x.id===id)?.price||0)*streamCart[id],0);
+  const disc=streamDisc(count), total=orig-disc;
   const wsp=`<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
-  cart.innerHTML=`
-    <div class="cart-head">🛒 Tu selección</div>
-    <div class="cart-body">
-      <div class="cart-chips">${streamSel.map(id=>{const s=DB.streaming.find(x=>x.id===id);return`<div class="chip">${s.emoji} ${s.name}<span class="chip-x" onclick="toggleStream('${id}')">✕</span></div>`;}).join('')}</div>
-      ${disc>0?`<div class="savings-box">🎉 Combo ${streamSel.length} plataformas — ahorras <strong>S/ ${disc}</strong> al mes</div>`:''}
-      <div class="price-row">
-        <div>${disc>0?`<div class="p-old">S/ ${orig}</div>`:''}<div class="p-big">S/ ${total} <span class="p-note">/ mes</span></div></div>
-        ${disc>0?`<div class="p-badge">💚 -S/ ${disc}</div>`:''}
+  cart.innerHTML=`<div class="cart-head">🛒 Tu selección (${count} plataforma${count!==1?'s':''})</div><div class="cart-body">
+    <div class="cart-chips">${ids.map(id=>{const s=DB.streaming.find(x=>x.id===id);return`<div class="chip">${s.emoji} ${s.name} × ${streamCart[id]}<span class="chip-x" onclick="removeStream('${id}')">−</span></div>`}).join('')}</div>
+   
+    <div class="price-row"><div>${disc>0?`<div class="p-old">S/ ${orig}</div>`:''}<div class="p-big">S/ ${total} <span class="p-note">/ mes</span></div></div>${disc>0?`<div class="p-badge">💚 -S/ ${disc}</div>`:''}</div>
+    <button class="btn-wsp" onclick="sendStreamWsp()">${wsp} Pedir y pagar 1 mes por WhatsApp</button>
+    <div class="stream-more-box">
+      <div class="stream-more-title">¿Quieres el servicio por más de 1 mes?</div>
+      <div class="stream-more-text">Elige una duración para consultar disponibilidad, pago y posible precio especial por WhatsApp.</div>
+      <div class="stream-month-options">
+        <button class="btn-month" onclick="sendStreamMultiWsp(3)">3 meses</button>
+        <button class="btn-month" onclick="sendStreamMultiWsp(6)">6 meses</button>
+        <button class="btn-month" onclick="sendStreamMultiWsp(12)">12 meses</button>
       </div>
-      <button class="btn-wsp" onclick="sendStreamWsp()">${wsp} Pedir por WhatsApp</button>
-    </div>`;
+    </div></div>`;
+  // cart.innerHTML=`<div class="cart-head">🛒 Tu selección (${count} plataforma${count!==1?'s':''})</div><div class="cart-body">
+  //   <div class="cart-chips">${ids.map(id=>{const s=DB.streaming.find(x=>x.id===id);return`<div class="chip">${s.emoji} ${s.name} × ${streamCart[id]}<span class="chip-x" onclick="removeStream('${id}')">−</span></div>`}).join('')}</div>
+  //   ${disc>0?`<div class="savings-box">🎉 Combo ${count} plataformas — ahorras <strong>S/ ${disc}</strong> al mes</div>`:''}
+  //   <div class="price-row"><div>${disc>0?`<div class="p-old">S/ ${orig}</div>`:''}<div class="p-big">S/ ${total} <span class="p-note">/ mes</span></div></div>${disc>0?`<div class="p-badge">💚 -S/ ${disc}</div>`:''}</div>
+  //   <button class="btn-wsp" onclick="sendStreamWsp()">${wsp} Pedir y pagar 1 mes por WhatsApp</button>
+  //   <div class="stream-more-box">
+  //     <div class="stream-more-title">¿Quieres el servicio por más de 1 mes?</div>
+  //     <div class="stream-more-text">Elige una duración para consultar disponibilidad, pago y posible precio especial por WhatsApp.</div>
+  //     <div class="stream-month-options">
+  //       <button class="btn-month" onclick="sendStreamMultiWsp(3)">3 meses</button>
+  //       <button class="btn-month" onclick="sendStreamMultiWsp(6)">6 meses</button>
+  //       <button class="btn-month" onclick="sendStreamMultiWsp(12)">12 meses</button>
+  //     </div>
+  //   </div></div>`;
+}
+function sendStreamWsp(){
+  const ids=streamIds(), count=streamCount();
+  const orig=ids.reduce((sum,id)=>sum+(DB.streaming.find(x=>x.id===id)?.price||0)*streamCart[id],0);
+  const disc=streamDisc(count);
+  const lines=ids.map(id=>{const s=DB.streaming.find(x=>x.id===id);return`📺 *${s.name}* × ${streamCart[id]} = S/ ${s.price*streamCart[id]}`});
+  let msg=`Hola! Quisiera pedir streaming por 1 mes:\n\n${lines.join('\n')}\n\n💰 *Total:* S/ ${orig-disc} / mes`;
+  if(disc>0)msg+=`\n🎉 _(Combo ${count} plataformas — ahorro: S/ ${disc})_`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 
-function sendStreamWsp(){
-  const orig=streamSel.reduce((s,id)=>s+(DB.streaming.find(x=>x.id===id)?.price||0),0);
-  const disc=streamDisc(streamSel.length);
-  const names=streamSel.map(id=>DB.streaming.find(x=>x.id===id)?.name).join(', ');
-  let msg=`Hola! Quisiera pedir:\n\n📺 *Streaming:* ${names}\n💰 *Total:* S/ ${orig-disc} / mes`;
-  if(disc>0)msg+=`\n🎉 _(Combo ${streamSel.length} plataformas — ahorro: S/ ${disc})_`;
+function sendStreamMultiWsp(months){
+  const ids=streamIds(), count=streamCount();
+  const orig=ids.reduce((sum,id)=>sum+(DB.streaming.find(x=>x.id===id)?.price||0)*streamCart[id],0);
+  const disc=streamDisc(count), monthly=orig-disc, estimated=monthly*months;
+  const lines=ids.map(id=>{const s=DB.streaming.find(x=>x.id===id);return`📺 *${s.name}* × ${streamCart[id]} perfil${streamCart[id]!==1?'es':''}`});
+  let msg=`Hola! Quisiera consultar el servicio por *${months} meses*:
+
+${lines.join('\n')}
+
+💰 Precio mensual actual: S/ ${monthly}
+🧾 Referencia por ${months} meses: S/ ${estimated}
+
+¿Me confirmas disponibilidad, forma de pago y si hay precio especial por ${months} meses?`;
+  if(disc>0)msg+=`
+🎉 _(Combo ${count} plataformas — ahorro mensual: S/ ${disc})_`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 
 // ═══════════════════════════════════════
 // DXN
 // ═══════════════════════════════════════
+function dxnCategory(p){
+  if(p.cat)return p.cat;
+  const n=(p.name+' '+(p.desc||'')).toLowerCase();
+  if(n.includes('coffee')||n.includes('café')||n.includes('cafe'))return 'Cafés';
+  if(n.includes('tea')||n.includes('infusion')||n.includes('oocha')||n.includes('noni')||n.includes('bebida')||n.includes('cocozhi'))return 'Bebidas e infusiones';
+  if(n.includes('spirulina')||n.includes('lion')||n.includes('mane')||n.includes('cápsula')||n.includes('capsula'))return 'Suplementos';
+  if(n.includes('oil')||n.includes('soap')||n.includes('toothpaste')||n.includes('shampoo')||n.includes('gel')||n.includes('lotion')||n.includes('cream'))return 'Cuidado personal';
+  return 'Otros';
+}
+function renderDXNFilters(){
+  const el=document.getElementById('dxn-filter'); if(!el)return;
+  const cats=['all',...new Set(DB.dxn.map(dxnCategory))];
+  el.innerHTML=cats.map(c=>`<button class="dxn-cat-btn${dxnFilter===c?' active':''}" onclick="dxnFilter='${c}';renderDXN()">${c==='all'?'Todos':c}</button>`).join('');
+}
 function renderDXN(){
   const g=document.getElementById('dxn-grid');
   if(!g)return;
+  renderDXNFilters();
+  const q=dxnSearch.trim().toLowerCase();
+  const list=DB.dxn.filter(p=>{
+    const inCat=dxnFilter==='all'||dxnCategory(p)===dxnFilter;
+    const inSearch=!q||(p.name+' '+(p.desc||'')).toLowerCase().includes(q);
+    return inCat&&inSearch;
+  });
   const wsp=`<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
-  g.innerHTML=DB.dxn.map(p=>{
-    const ok=p.stock;
-    const imgHtml=p.img
-      ?`<img src="${p.img}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      :'';
+  g.innerHTML=list.length?list.map(p=>{
+    const ok=p.stock, qty=dxnQty[p.id]||0, inCart=dxnCart.some(x=>x.id===p.id);
+    const imgHtml=p.img?`<img src="${p.img}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`:'';
     const emoStyle=p.img?'style="display:none"':'';
-    return `<div class="dxn-card${!ok?' dis':''}" style="animation-delay:${DB.dxn.indexOf(p)*0.05}s">
-      <div class="dxn-img-wrap">
-        ${imgHtml}
-        <span class="dxn-img-fallback" ${emoStyle}>${p.emoji}</span>
-        ${!ok?'<div class="no-stock-tag">Sin stock</div>':''}
-      </div>
+    return `<div class="dxn-card${!ok?' dis':''}${inCart?' sel':''}">
+      <div class="dxn-img-wrap">${imgHtml}<span class="dxn-img-fallback" ${emoStyle}>${p.emoji}</span>${!ok?'<div class="no-stock-tag">Sin stock</div>':''}</div>
       <div class="dxn-body">
-        <div class="dxn-name">${p.name}</div>
-        <div class="dxn-desc">${p.desc}</div>
-        <div class="dxn-price">S/ ${p.price}</div>
-        ${ok?`<button class="btn-dxn" onclick="buyDXN('${p.id}')">${wsp} Pedir por WhatsApp</button>`
-            :`<button class="btn-dxn" disabled>Sin stock</button>`}
-      </div>
-    </div>`;
-  }).join('');
+        <div class="dxn-name">${p.name}</div><div class="nisp-cat primera" style="margin:6px 0">${dxnCategory(p)}</div>
+        <div class="dxn-desc">${p.desc}</div><div class="dxn-price">S/ ${p.price}</div>
+        ${ok?`<div class="qty-wrap"><button class="qty-btn" onclick="chDXNQty('${p.id}',-1)">−</button><span class="qty-num" id="dqn-${p.id}">${qty}</span><button class="qty-btn" onclick="chDXNQty('${p.id}',1)">+</button></div><button class="btn-dxn" id="dab-${p.id}" onclick="addDXNToCart('${p.id}')" ${qty===0?'disabled':''}>${qty===0?'Selecciona cantidad':wsp+' Agregar '+qty+' al pedido'}</button>`:`<button class="btn-dxn" disabled>Sin stock</button>`}
+      </div></div>`;
+  }).join(''):`<div class="empty-note" style="grid-column:1/-1">No encontré productos con esa búsqueda.</div>`;
+  renderDXNCart();
 }
-
-function buyDXN(id){
-  const p=DB.dxn.find(x=>x.id===id);
-  const msg=`Hola! Quisiera pedir:\n\n${p.emoji} *${p.name}*\n📋 ${p.desc}\n💰 *Precio:* S/ ${p.price}`;
+function chDXNQty(id,delta){dxnQty[id]=Math.max(0,(dxnQty[id]||0)+delta);renderDXN()}
+function addDXNToCart(id){
+  const p=DB.dxn.find(x=>x.id===id), qty=dxnQty[id]||0; if(!p||!qty)return;
+  const ex=dxnCart.find(x=>x.id===id); if(ex)ex.qty+=qty; else dxnCart.push({...p,qty,cat:dxnCategory(p)});
+  dxnQty[id]=0; renderDXN();
+}
+function removeDXN(id){dxnCart=dxnCart.filter(x=>x.id!==id);renderDXN()}
+function renderDXNCart(){
+  const empty=document.getElementById('dxn-empty'), cart=document.getElementById('dxn-cart'); if(!cart)return;
+  if(!dxnCart.length){empty.classList.remove('hidden');cart.classList.add('hidden');return;}
+  empty.classList.add('hidden');cart.classList.remove('hidden');
+  const total=dxnCart.reduce((s,x)=>s+x.qty*x.price,0), totalQty=dxnCart.reduce((s,x)=>s+x.qty,0);
+  cart.innerHTML=`<div class="dxn-cart-head"><span>🌿 Tu pedido DXN</span><span>${totalQty} producto${totalQty!==1?'s':''}</span></div><div class="dxn-cart-body">
+    ${dxnCart.map(x=>`<div class="dxn-item"><div><div class="dxn-item-name">${x.emoji} ${x.name}</div><div class="dxn-item-sub">${x.qty} × S/ ${x.price} · ${x.cat||dxnCategory(x)}</div></div><div style="display:flex;align-items:center;gap:8px"><span class="dxn-item-price">S/ ${x.qty*x.price}</span><button class="nisp-item-del" onclick="removeDXN('${x.id}')">✕</button></div></div>`).join('')}
+    <div class="nisp-total-row"><span class="nisp-total-lbl">Total a pagar</span><span class="nisp-total-big">S/ ${total}</span></div><button class="btn-wsp2" onclick="sendDXNWsp()">Enviar pedido DXN por WhatsApp</button></div>`;
+}
+function sendDXNWsp(){
+  const lines=dxnCart.map(x=>`${x.emoji} *${x.name}* × ${x.qty} = S/ ${x.qty*x.price}`);
+  const total=dxnCart.reduce((s,x)=>s+x.qty*x.price,0);
+  const msg=`Hola! Quisiera pedir productos DXN:\n\n${lines.join('\n')}\n\n💰 *Total:* S/ ${total}`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 }
+function buyDXN(id){dxnQty[id]=1;addDXNToCart(id)}
 
 // ═══════════════════════════════════════
 // GALLERY
@@ -1239,114 +1335,52 @@ function renderNisperoFilters(){
   const f=document.getElementById('nisp-filter');
   if(f) f.innerHTML=cats.map(c=>`<button class="cat-btn${nispFilter===c?' active':''}" onclick="filterNisp('${c}',this)">${lbl[c]||c}</button>`).join('');
 }
-
-function filterNisp(cat,btn){
-  nispFilter=cat;
-  document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active');
-  renderNispero(cat);
-}
-
+function filterNisp(cat,btn){nispFilter=cat;document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderNispero(cat)}
+function getNispUnit(id){return (nispQty[id]?.unit)||'cajon'}
+function setNispUnit(id,unit){nispQty[id]=nispQty[id]||{qty:0,unit:'cajon'};nispQty[id].unit=unit;renderNispero(nispFilter)}
+function nispKgPrice(p){return p.priceKg||p.kgPrice||Math.max(1,Math.round((p.price||20)/20))}
+function nispQtyVal(id){return nispQty[id]?.qty||0}
 function renderNispero(cat){
   const list=cat==='all'?DB.nispero:DB.nispero.filter(x=>x.cat===cat);
-  const g=document.getElementById('nisp-grid');
-  if(!g)return;
+  const g=document.getElementById('nisp-grid'); if(!g)return;
   g.innerHTML=list.map(p=>{
-    const ok=p.stock;
-    const qty=nispQty[p.id]||0;
+    const ok=p.stock, qty=nispQtyVal(p.id), unit=getNispUnit(p.id);
     const catLbl={extra:'Extra',primera:'Primera',segunda:'Segunda'};
+    const unitPrice=unit==='kilo'?nispKgPrice(p):p.price;
+    const unitTxt=unit==='kilo'?'kilo':'cajón';
     return `<div class="nisp-card${!ok?' dis':''}">
-      <div class="nisp-header">${p.emoji}</div>
-      <div class="nisp-body">
-        <span class="nisp-cat ${p.cat}">${catLbl[p.cat]||p.cat}</span>
-        ${!ok?'<div class="no-stock-tag" style="position:relative;margin-bottom:6px">Sin stock</div>':''}
-        <div class="nisp-name">${p.name}</div>
-        <div class="nisp-desc">${p.desc}</div>
-        <div class="nisp-price">S/ ${p.price} <span>/ cajón</span></div>
-        ${ok?`
-          <div class="qty-wrap">
-            <button class="qty-btn" onclick="chQty('${p.id}',-1)">−</button>
-            <span class="qty-num" id="qn-${p.id}">${qty}</span>
-            <button class="qty-btn" onclick="chQty('${p.id}',1)">+</button>
-          </div>
-          <button class="add-btn" id="ab-${p.id}" onclick="addNispToCart('${p.id}')" ${qty===0?'disabled':''}>
-            ${qty===0?'Selecciona cantidad':'Agregar '+qty+(qty===1?' cajón':' cajones')+' — S/'+(qty*p.price)}
-          </button>`
-          :`<button class="add-btn" disabled>Sin stock</button>`}
-      </div>
-    </div>`;
+      <div class="nisp-header">${p.emoji}</div><div class="nisp-body">
+        <span class="nisp-cat ${p.cat}">${catLbl[p.cat]||p.cat}</span>${!ok?'<div class="no-stock-tag" style="position:relative;margin-bottom:6px">Sin stock</div>':''}
+        <div class="nisp-name">${p.name}</div><div class="nisp-desc">${p.desc}</div>
+        <div class="unit-switch"><button class="unit-btn${unit==='cajon'?' active':''}" onclick="setNispUnit('${p.id}','cajon')">Por cajón<br>S/ ${p.price}</button><button class="unit-btn${unit==='kilo'?' active':''}" onclick="setNispUnit('${p.id}','kilo')">Por kilo<br>S/ ${nispKgPrice(p)}</button></div>
+        <div class="nisp-unit-note">Elige si tu cliente quiere comprar por kilos o por cajones.</div>
+        <div class="nisp-price">S/ ${unitPrice} <span>/ ${unitTxt}</span></div>
+        ${ok?`<div class="qty-wrap"><button class="qty-btn" onclick="chQty('${p.id}',-1)">−</button><span class="qty-num" id="qn-${p.id}">${qty}</span><button class="qty-btn" onclick="chQty('${p.id}',1)">+</button></div><button class="add-btn" id="ab-${p.id}" onclick="addNispToCart('${p.id}')" ${qty===0?'disabled':''}>${qty===0?'Selecciona cantidad':'Agregar '+qty+' '+(unit==='kilo'?(qty===1?'kilo':'kilos'):(qty===1?'cajón':'cajones'))+' — S/'+(qty*unitPrice)}</button>`:`<button class="add-btn" disabled>Sin stock</button>`}
+      </div></div>`;
   }).join('');
 }
-
-function chQty(id,delta){
-  nispQty[id]=Math.max(0,(nispQty[id]||0)+delta);
-  const p=DB.nispero.find(x=>x.id===id);
-  const qty=nispQty[id];
-  const qn=document.getElementById('qn-'+id);
-  const ab=document.getElementById('ab-'+id);
-  if(qn)qn.textContent=qty;
-  if(ab){
-    ab.disabled=qty===0;
-    ab.textContent=qty===0?'Selecciona cantidad':'Agregar '+qty+(qty===1?' cajón':' cajones')+' — S/'+(qty*p.price);
-  }
-}
-
+function chQty(id,delta){nispQty[id]=nispQty[id]||{qty:0,unit:'cajon'};nispQty[id].qty=Math.max(0,nispQty[id].qty+delta);renderNispero(nispFilter)}
 function addNispToCart(id){
-  const p=DB.nispero.find(x=>x.id===id);
-  const qty=nispQty[id]||0;
-  if(!qty)return;
-  const ex=nispCart.find(x=>x.id===id);
-  if(ex)ex.qty+=qty;else nispCart.push({...p,qty});
-  nispQty[id]=0;
-  renderNispero(nispFilter);
-  renderNispCart();
+  const p=DB.nispero.find(x=>x.id===id); const qty=nispQtyVal(id); if(!p||!qty)return;
+  const unit=getNispUnit(id), unitPrice=unit==='kilo'?nispKgPrice(p):p.price, key=id+'-'+unit;
+  const ex=nispCart.find(x=>x.key===key); if(ex)ex.qty+=qty; else nispCart.push({...p,key,qty,unit,unitPrice});
+  nispQty[id]={qty:0,unit}; renderNispero(nispFilter); renderNispCart();
 }
-
-function removeNisp(id){
-  nispCart=nispCart.filter(x=>x.id!==id);
-  renderNispCart();
-}
-
+function removeNisp(key){nispCart=nispCart.filter(x=>x.key!==key);renderNispCart()}
 function renderNispCart(){
-  const empty=document.getElementById('nisp-empty');
-  const cart=document.getElementById('nisp-cart');
-  if(!cart)return;
+  const empty=document.getElementById('nisp-empty'), cart=document.getElementById('nisp-cart'); if(!cart)return;
   if(!nispCart.length){empty.classList.remove('hidden');cart.classList.add('hidden');return;}
   empty.classList.add('hidden');cart.classList.remove('hidden');
-  const total=nispCart.reduce((s,x)=>s+x.qty*x.price,0);
-  const totalQty=nispCart.reduce((s,x)=>s+x.qty,0);
+  const total=nispCart.reduce((s,x)=>s+x.qty*x.unitPrice,0), totalQty=nispCart.reduce((s,x)=>s+x.qty,0);
+  const units=nispCart.some(x=>x.unit==='kilo')&&nispCart.some(x=>x.unit==='cajon')?'kilos/cajones':(nispCart[0].unit==='kilo'?'kilos':'cajones');
   const wsp=`<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
-  cart.innerHTML=`
-    <div class="nisp-cart-head">
-      <span>🧺 Tu pedido de nísperos</span>
-      <span>${totalQty} cajón${totalQty!==1?'es':''}</span>
-    </div>
-    <div class="nisp-cart-body">
-      ${nispCart.map(x=>`
-        <div class="nisp-item">
-          <div class="nisp-item-l">
-            <span class="nisp-item-emo">${x.emoji}</span>
-            <div>
-              <div class="nisp-item-name">${x.name}</div>
-              <div class="nisp-item-qty">${x.qty} cajón${x.qty!==1?'es':''} × S/ ${x.price}</div>
-            </div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="nisp-item-price">S/ ${x.qty*x.price}</span>
-            <button class="nisp-item-del" onclick="removeNisp('${x.id}')">✕</button>
-          </div>
-        </div>`).join('')}
-      <div class="nisp-total-row">
-        <span class="nisp-total-lbl">Total a pagar</span>
-        <span class="nisp-total-big">S/ ${total}</span>
-      </div>
-      <button class="btn-wsp2" onclick="sendNispWsp()">${wsp} Enviar pedido por WhatsApp</button>
-    </div>`;
+  cart.innerHTML=`<div class="nisp-cart-head"><span>🧺 Tu pedido de nísperos</span><span>${totalQty} ${units}</span></div><div class="nisp-cart-body">
+    ${nispCart.map(x=>`<div class="nisp-item"><div class="nisp-item-l"><span class="nisp-item-emo">${x.emoji}</span><div><div class="nisp-item-name">${x.name}</div><div class="nisp-item-qty">${x.qty} ${x.unit==='kilo'?(x.qty===1?'kilo':'kilos'):(x.qty===1?'cajón':'cajones')} × S/ ${x.unitPrice}</div></div></div><div style="display:flex;align-items:center;gap:8px"><span class="nisp-item-price">S/ ${x.qty*x.unitPrice}</span><button class="nisp-item-del" onclick="removeNisp('${x.key}')">✕</button></div></div>`).join('')}
+    <div class="nisp-total-row"><span class="nisp-total-lbl">Total a pagar</span><span class="nisp-total-big">S/ ${total}</span></div><button class="btn-wsp2" onclick="sendNispWsp()">${wsp} Enviar pedido por WhatsApp</button></div>`;
 }
-
 function sendNispWsp(){
-  const lines=nispCart.map(x=>`${x.emoji} *${x.name}* × ${x.qty} cajón${x.qty!==1?'es':''} = S/ ${x.qty*x.price}`);
-  const total=nispCart.reduce((s,x)=>s+x.qty*x.price,0);
+  const lines=nispCart.map(x=>`${x.emoji} *${x.name}* × ${x.qty} ${x.unit==='kilo'?(x.qty===1?'kilo':'kilos'):(x.qty===1?'cajón':'cajones')} = S/ ${x.qty*x.unitPrice}`);
+  const total=nispCart.reduce((s,x)=>s+x.qty*x.unitPrice,0);
   const msg=`Hola! Quisiera pedir nísperos:\n\n${lines.join('\n')}\n\n💰 *Total:* S/ ${total}`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 }
@@ -1454,10 +1488,11 @@ function delGallery(id){
 function addStreaming(){
   const name=document.getElementById('ns-name').value.trim();
   const emo=document.getElementById('ns-emo').value.trim()||'📺';
+  const img=document.getElementById('ns-img').value.trim();
   const price=parseFloat(document.getElementById('ns-price').value);
   if(!name||isNaN(price)){alert('Completa nombre y precio');return;}
-  DB.streaming.push({id:uid('s'),name,emoji:emo,price,stock:true});
-  ['ns-name','ns-emo','ns-price'].forEach(id=>document.getElementById(id).value='');
+  DB.streaming.push({id:uid('s'),name,emoji:emo,img,price,stock:true});
+  ['ns-name','ns-emo','ns-img','ns-price'].forEach(id=>document.getElementById(id).value='');
   renderAdminStreaming();if(curPage==='streaming')renderStreaming();
 }
 function addDXN(){
@@ -1465,9 +1500,10 @@ function addDXN(){
   const emo=document.getElementById('nd-emo').value.trim()||'🌿';
   const img=document.getElementById('nd-img').value.trim();
   const desc=document.getElementById('nd-desc').value.trim()||'';
+  const cat=document.getElementById('nd-cat').value;
   const price=parseFloat(document.getElementById('nd-price').value);
   if(!name||isNaN(price)){alert('Completa nombre y precio');return;}
-  DB.dxn.push({id:uid('d'),name,emoji:emo,img,price,desc,stock:true});
+  DB.dxn.push({id:uid('d'),name,emoji:emo,img,price,desc,cat,stock:true});
   ['nd-name','nd-emo','nd-img','nd-desc','nd-price'].forEach(id=>document.getElementById(id).value='');
   renderAdminDXN();if(curPage==='dxn')renderDXN();
 }

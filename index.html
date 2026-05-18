@@ -209,6 +209,22 @@ nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
 .btn-wsp:hover{background:#1cb855}
 .empty-note{text-align:center;padding:2rem;color:var(--text3);font-size:0.84rem}
 
+.streaming-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* título a la izquierda, logo a la derecha */
+}
+
+.streaming-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.streaming-logo {
+  height: 40px; /* ajusta según el tamaño que quieras */
+  width: auto;
+}
+
 /* ════════════════════════════════════════
    DXN
 ════════════════════════════════════════ */
@@ -339,6 +355,56 @@ nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
 .btn-wsp2:hover{background:#1cb855}
 
 
+/* ######################### */
+@media(max-width:900px){
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr; /* tablets */
+  }
+}
+
+@media(max-width:480px){
+  .gallery-grid {
+    grid-template-columns: 1fr; /* celulares */
+  }
+  .gallery-item.big {
+    grid-row: span 1; /* evita que se vea gigante en móvil */
+    height: auto;
+  }
+}
+
+@media(max-width:480px){
+  .gallery-img img,
+  .gallery-item.big iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width:480px){
+  .nisp-gallery-title {
+    font-size: 1.5rem;
+  }
+}
+
+#lightbox-content iframe,
+#lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+
+@media(max-width:480px){
+  .gallery-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+  }
+  .gallery-item {
+    min-width: 220px;
+    flex: 0 0 auto;
+  }
+}
 
 /* ════════════════════════════════════════
    MEJORAS RESPONSIVE + NUEVAS FUNCIONES
@@ -513,8 +579,12 @@ footer strong{color:rgba(255,255,255,0.65)}
   <div class="container">
     <div class="sec-wrap reveal">
       <div class="sec-tag">📺 Streaming</div>
-      <h2>Plataformas de Streaming</h2>
-      <p>Elige una o combina varias — mientras más eliges, más ahorras</p>
+      <div class="streaming-header">
+  <h2>Plataformas de Streaming</h2>
+  <img src="imagen/logo1.png" alt="Logo Negocio" class="streaming-logo">
+  <!-- PONER LOGOOOOOOOOOO -->
+</div>
+<p>Elige una o combina varias — mientras más eliges, más ahorras</p>
     </div>
     <div class="sec-line"></div>
     <div id="promo-area" class="reveal reveal-delay-1"></div>
@@ -1027,7 +1097,7 @@ img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkD
  price:146.00,
  desc:"Té latte con Ganoderma de sabor suave y cremoso ideal para momentos de relajación.",
   img:'https://m.media-amazon.com/images/I/51ku1wJL1lL.jpg',
- stock:true},
+ stock:true}
 
 // {id:"DXN025",
 //  name:"DXN Multipurpose Seasoning",
@@ -1168,7 +1238,8 @@ img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkD
   {id:'g5', type:'youtube', src:'https://drive.google.com/file/d/1dl3iaUjIadq8O05xd6KnvVlAhvs3w1TQ/preview', title:'Producción', emoji:'🎥'}
 ],
   // PROMOCION PARA ACTIVAR DESDE AQUI
-  promo:'Por la compra de Netflix o Disney+, llevate Prime Video o Hbo Max o Paramount a 7 SOLES.'
+  promo:'',
+  // promo:'Por la compra de Netflix o Disney+, llevate Prime Video o Hbo Max o Paramount a 7 SOLES.'
 };
 
 // ═══════════════════════════════════════

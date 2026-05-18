@@ -270,7 +270,7 @@ nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
 .gallery-img{width:100%;height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#e8f5ee,#f0fdf4);position:relative;overflow:hidden}
 .gallery-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* .gallery-item.big img, */
-.gallery-item.big video{
+.gallery-item.big iframe{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -1160,12 +1160,12 @@ img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkD
     {id:'n4',name:'Cajón 0',emoji:'🍊',price:180, cat:'Estándar',  desc:'~12 kg · calibre premium',stock:true},
   ],
   gallery:[
-    {id:'g1', type:'video', src:'video/20251012_173508.mp4', title:'Empaque del Nispero', emoji:'🎬'},
-  {id:'g2', type:'image', src:'imagen/IMG_20250608_120701121.jpg', title:'Nuestro Terreno', emoji:'🌳'},
+    {id:'g1', type:'drive', src:'https://drive.google.com/file/d/1kgF2kPCORUvctMVtx1FIA-BDdWVA7ddu/preview', title:'Empaque del Nispero', emoji:'🎬'},
+    {id:'g2', type:'image', src:'imagen/IMG_20250608_120701121.jpg', title:'Nuestro Terreno', emoji:'🌳'},
   {id:'g3', type:'image', src:'imagen/20251012_173845.jpg', title:'Clasificando fruta', emoji:'🍊'},
 
-  {id:'g4', type:'video', src:'video/20251012_222542.mp4', title:'Cajones listos', emoji:'📦'},
-  {id:'g5', type:'video', src:'video/VID_20241223_061647.mp4', title:'Producción', emoji:'🎥'}
+  {id:'g4', type:'youtube', src:'https://drive.google.com/file/d/1QtxzBA0_DiQmHUWiuarpHFk4tiPsga_N/preview', title:'Cajones listos', emoji:'📦'},
+  {id:'g5', type:'youtube', src:'https://drive.google.com/file/d/1dl3iaUjIadq8O05xd6KnvVlAhvs3w1TQ/preview', title:'Producción', emoji:'🎥'}
 ],
   // PROMOCION PARA ACTIVAR DESDE AQUI
   promo:'Por la compra de Netflix o Disney+, llevate Prime Video o Hbo Max o Paramount a 7 SOLES.'
@@ -1453,6 +1453,7 @@ function renderGallery(){
 
       ${
         g.type === 'image'
+
         ?
 
         `
@@ -1463,18 +1464,52 @@ function renderGallery(){
 
         :
 
+        g.type === 'youtube'
+
+        ?
+
+       `
+<iframe
+  class="gallery-img"
+  src="${g.src}"
+  title="${g.title}"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+`
+
+        :
+
+        g.type === 'drive'
+
+?
+
+`
+<iframe
+  class="gallery-img"
+  src="${g.src}"
+  title="${g.title}"
+  frameborder="0"
+  allow="autoplay"
+  allowfullscreen>
+</iframe>
+`
+
+:
+
         `
         <video
-  controls
-  autoplay
-  muted
-  playsinline
-  preload="metadata"
-  class="gallery-img"
-  onended="this.pause(); this.currentTime=0;"
->
-  <source src="${g.src}" type="video/mp4">
-</video>
+          controls
+          autoplay
+          muted
+          playsinline
+          preload="metadata"
+          class="gallery-img"
+          onended="this.pause(); this.currentTime=0;"
+        >
+          <source src="${g.src}" type="video/mp4">
+        </video>
         `
       }
 

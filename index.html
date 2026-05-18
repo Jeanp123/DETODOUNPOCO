@@ -1328,6 +1328,7 @@ function showPage(p){
   if(idx>=0)document.querySelectorAll('.nav-btn')[idx].classList.add('active');
   curPage=p;
   window.scrollTo({top:0,behavior:'smooth'});
+  if(p === 'dxn') renderDXN();
   setTimeout(observeReveal,100);
 }
 

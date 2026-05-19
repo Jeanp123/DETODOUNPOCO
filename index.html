@@ -1249,7 +1249,12 @@ img:'https://4.bp.blogspot.com/-W-8tqc4OnjY/W1broMwkSbI/AAAAAAAAh98/gP3iU8pwGVkD
   {id:'g5', type:'youtube', src:'https://drive.google.com/file/d/1dl3iaUjIadq8O05xd6KnvVlAhvs3w1TQ/preview', title:'Producción', emoji:'🎥'}
 ],
   // PROMOCION PARA ACTIVAR DESDE AQUI
-  promo:'',
+   promos: [
+    "Llévate 2 perfiles de Prime Video o HBO Max o Paramount a 14 soles.",
+    "Canva Pro x 1 año a 45 soles.",
+    "Por la compra de Netflix o Disney+, llévate Crunchyrool a 6 soles.",
+        "Si invitas a un amigo mas, se te reduce 1 mas en tu compra"
+  ]
   // promo:'Por la compra de Netflix o Disney+, llevate Prime Video o Hbo Max o Paramount a 7 SOLES.'
 };
 
@@ -1350,13 +1355,24 @@ function streamDisc(n){return n>=2?n:0}
 function streamIds(){return Object.keys(streamCart).filter(id=>streamCart[id]>0)}
 function streamCount(){return streamIds().reduce((a,id)=>a+streamCart[id],0)}
 
-function renderPromo(){
-  const el=document.getElementById('promo-area');
-  if(!el)return;
-  if(DB.promo&&DB.promo.trim()){
-    el.innerHTML=`<div class="promo-live"><span class="pbadge fire">🔥 Oferta</span><div class="ptext">${DB.promo.replace(/\n/g,'<br>')}</div></div>`;
+function renderPromo() {
+  const el = document.getElementById('promo-area');
+  if (!el) return;
+
+  if (DB.promos && DB.promos.length > 0) {
+    el.innerHTML = ""; // Limpiar contenido
+    DB.promos.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'promo-live';
+      div.innerHTML = `<span class="pbadge fire">🔥 Oferta</span><div class="ptext">${p.replace(/\n/g, '<br>')}</div>`;
+      el.appendChild(div);
+    });
   } else {
-    el.innerHTML=`<div class="promo-soon"><span class="pbadge soon">📅</span><div class="ptext"><strong>Próximamente</strong> — nuevas promociones y ofertas de último momento</div></div>`;
+    el.innerHTML = `
+      <div class="promo-soon">
+        <span class="pbadge soon">📅</span>
+        <div class="ptext"><strong>Próximamente</strong> — nuevas promociones y ofertas de último momento</div>
+      </div>`;
   }
 }
 
@@ -1829,10 +1845,12 @@ function addGalleryItem(){
   ['ng-url','ng-title'].forEach(id=>document.getElementById(id).value='');
   renderAdminGallery();if(curPage==='nispero')renderGallery();
 }
-function savePromo(){
-  DB.promo=document.getElementById('promo-txt').value;
+function savePromo() {
+  const promoText = document.getElementById('promo-txt').value;
+  // Separar por líneas y filtrar vacíos
+  DB.promos = promoText.split('\n').map(p => p.trim()).filter(p => p !== "");
   renderPromo();
-  alert('✅ Promoción guardada');
+  alert('✅ Promociones guardadas');
 }
 </script>
 </body>

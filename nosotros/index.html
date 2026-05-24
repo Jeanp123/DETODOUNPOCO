@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | De Todo un Poco</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --bg:#faf9f6;
+      --text:#1a1714;
+      --text2:#6b6560;
+      --gold:#c8962a;
+      --gold2:#f0c060;
+      --border:#e2ddd5;
+      --green:#2d7a45;
+    }
+
+    body{
+      font-family:'Plus Jakarta Sans',sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%,rgba(200,150,42,.16),transparent 28%),
+        radial-gradient(circle at 90% 20%,rgba(45,122,69,.13),transparent 30%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+
+    h1,h2{
+      font-family:'Playfair Display',serif;
+    }
+
+    .page-nav{
+      height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 2rem;
+      background:rgba(250,249,246,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .page-logo{
+      font-family:'Playfair Display',serif;
+      font-size:1.25rem;
+      color:var(--text);
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:800;
+    }
+
+    .logo-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--gold);
+      display:inline-block;
+    }
+
+    .back-btn{
+      color:var(--text);
+      text-decoration:none;
+      border:1.5px solid var(--border);
+      padding:.55rem 1rem;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:700;
+      background:#fff;
+      transition:.25s;
+    }
+
+    .back-btn:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+      transform:translateY(-2px);
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:4rem 1.5rem;
+    }
+
+    .hero{
+      background:#1a1714;
+      color:#fff;
+      border-radius:28px;
+      padding:4rem 2rem;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 18px 50px rgba(0,0,0,.16);
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(240,192,96,.24),transparent 32%),
+        radial-gradient(circle at 80% 10%,rgba(45,122,69,.20),transparent 32%);
+      pointer-events:none;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:.35rem .9rem;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.13);
+      color:rgba(255,255,255,.72);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:1.2rem;
+    }
+
+    .hero h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.05;
+      margin-bottom:1rem;
+    }
+
+    .hero h1 span{
+      color:var(--gold2);
+      font-style:italic;
+    }
+
+    .hero p{
+      color:rgba(255,255,255,.68);
+      line-height:1.8;
+      font-size:1rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-top:2rem;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:1.5rem;
+      box-shadow:0 8px 30px rgba(0,0,0,.07);
+    }
+
+    .card-icon{
+      width:46px;
+      height:46px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff7e5;
+      color:var(--gold);
+      font-size:1.3rem;
+      margin-bottom:1rem;
+    }
+
+    .card h3{
+      font-size:1rem;
+      margin-bottom:.45rem;
+    }
+
+    .card p{
+      font-size:.86rem;
+      color:var(--text2);
+      line-height:1.65;
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem;
+      color:var(--text2);
+      font-size:.8rem;
+    }
+
+    @media(max-width:800px){
+      .page-nav{
+        padding:0 1rem;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:3rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="page-nav">
+    <a href="../index.html" class="page-logo">
+      <span class="logo-dot"></span>
+      De Todo un Poco
+    </a>
+
+    <a href="../index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver
+    </a>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="tag">Sobre nosotros</div>
+
+        <h1>Una tienda pensada para comprar <span>fácil y rápido</span></h1>
+
+        <p>
+          En De Todo un Poco reunimos servicios de streaming, productos DXN y nísperos frescos
+          en un solo espacio. Nuestro objetivo es que puedas elegir lo que necesitas de manera
+          sencilla, consultar precios al instante y hacer tu pedido directamente por WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3>Atención rápida</h3>
+        <p>Respondemos tus consultas y pedidos de manera directa para que no pierdas tiempo.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-shield-heart"></i>
+        </div>
+        <h3>Confianza</h3>
+        <p>Trabajamos con productos y servicios seleccionados, buscando una experiencia segura.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <h3>Atención personalizada</h3>
+        <p>Cada pedido se coordina de forma personalizada según lo que el cliente necesita.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 De Todo un Poco. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

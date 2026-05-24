@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas frecuentes | De Todo un Poco</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --bg:#faf9f6;
+      --text:#1a1714;
+      --text2:#6b6560;
+      --gold:#c8962a;
+      --gold2:#f0c060;
+      --border:#e2ddd5;
+    }
+
+    body{
+      font-family:'Plus Jakarta Sans',sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%,rgba(92,63,163,.13),transparent 28%),
+        radial-gradient(circle at 85% 15%,rgba(200,150,42,.18),transparent 32%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+
+    h1,h2{
+      font-family:'Playfair Display',serif;
+    }
+
+    .page-nav{
+      height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 2rem;
+      background:rgba(250,249,246,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .page-logo{
+      font-family:'Playfair Display',serif;
+      font-size:1.25rem;
+      color:var(--text);
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:800;
+    }
+
+    .logo-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--gold);
+      display:inline-block;
+    }
+
+    .back-btn{
+      color:var(--text);
+      text-decoration:none;
+      border:1.5px solid var(--border);
+      padding:.55rem 1rem;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:700;
+      background:#fff;
+      transition:.25s;
+    }
+
+    .back-btn:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+      transform:translateY(-2px);
+    }
+
+    .container{
+      max-width:920px;
+      margin:0 auto;
+      padding:4rem 1.5rem;
+    }
+
+    .header{
+      text-align:center;
+      margin-bottom:2rem;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:.35rem .9rem;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--text2);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+
+    .header h1{
+      font-size:clamp(2.2rem,5vw,3.6rem);
+      margin-bottom:.7rem;
+      letter-spacing:-.04em;
+    }
+
+    .header h1 span{
+      color:var(--gold);
+      font-style:italic;
+    }
+
+    .header p{
+      color:var(--text2);
+      line-height:1.7;
+    }
+
+    .faq-list{
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+
+    .faq-item{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+
+    .faq-question{
+      width:100%;
+      background:none;
+      border:none;
+      padding:1.2rem 1.3rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      cursor:pointer;
+      font-family:'Plus Jakarta Sans',sans-serif;
+      font-size:.95rem;
+      font-weight:800;
+      color:var(--text);
+      text-align:left;
+    }
+
+    .faq-question i{
+      color:var(--gold);
+      transition:.25s;
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .3s ease;
+    }
+
+    .faq-answer p{
+      padding:0 1.3rem 1.2rem;
+      color:var(--text2);
+      font-size:.88rem;
+      line-height:1.75;
+    }
+
+    .faq-item.active .faq-answer{
+      max-height:180px;
+    }
+
+    .faq-item.active .faq-question i{
+      transform:rotate(180deg);
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem;
+      color:var(--text2);
+      font-size:.8rem;
+    }
+
+    @media(max-width:700px){
+      .page-nav{
+        padding:0 1rem;
+      }
+
+      .back-btn{
+        font-size:.76rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="page-nav">
+    <a href="../index.html" class="page-logo">
+      <span class="logo-dot"></span>
+      De Todo un Poco
+    </a>
+
+    <a href="../index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver
+    </a>
+  </nav>
+
+  <main class="container">
+
+    <section class="header">
+      <div class="tag">Ayuda rápida</div>
+
+      <h1>Preguntas <span>frecuentes</span></h1>
+
+      <p>
+        Aquí encontrarás respuestas rápidas sobre pedidos, pagos, atención y coordinación.
+      </p>
+    </section>
+
+    <section class="faq-list">
+
+      <div class="faq-item active">
+        <button class="faq-question">
+          ¿Cómo realizo un pedido?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Solo debes elegir los productos o servicios que deseas y enviar tu pedido por WhatsApp.
+            Luego se coordina la disponibilidad, el pago y la entrega o activación.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué métodos de pago aceptan?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Aceptamos pagos por Yape, Plin y otros métodos disponibles según coordinación.
+            Los detalles se confirman al momento de realizar el pedido.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Los precios están en soles?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Sí, todos los precios mostrados están en soles peruanos. En caso de promociones,
+            el precio final se confirma antes de realizar el pago.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Cómo sé si hay stock disponible?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>
+            La página muestra los productos o servicios disponibles. De todas formas,
+            el stock se confirma nuevamente por WhatsApp antes de cerrar el pedido.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 De Todo un Poco. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

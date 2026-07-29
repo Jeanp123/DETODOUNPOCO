@@ -2064,7 +2064,9 @@ function renderNisperoFilters(){
 function filterNisp(cat,btn){nispFilter=cat;document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderNispero(cat)}
 function getNispUnit(id){return (nispQty[id]?.unit)||'cajon'}
 function setNispUnit(id,unit){nispQty[id]=nispQty[id]||{qty:0,unit:'cajon'};nispQty[id].unit=unit;renderNispero(nispFilter)}
-function nispKgPrice(p){return p.priceKg||p.kgPrice||Math.max(1,Math.round((p.price||20)/20))}
+function nispKgPrice(p){
+  return p.priceKg || p.kgPrice || Number((((Number(p.price) || 0) / 13) + 1).toFixed(2))
+}
 function nispQtyVal(id){return nispQty[id]?.qty||0}
 function renderNispero(cat){
   const list=cat==='all'?DB.nispero:DB.nispero.filter(x=>x.cat===cat);

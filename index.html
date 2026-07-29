@@ -1147,7 +1147,7 @@ let DB = {
     name:'Paramount+',
     emoji:'⭐',
     img:'https://cdn.businessinsider.de/wp-content/uploads/2023/01/paramount-plus-logo-0.png?ver=1675173098',
-    price:16,
+    price:11,
     stock:true
   },
   {
@@ -1202,7 +1202,7 @@ let DB = {
     name:'IPTV Pro',
     emoji:'📡',
     img:'https://image.winudf.com/v2/image/Y29tLmlwdHZwcm9ib3guaXB0dnByb2JveGlwdHZib3hfc2NyZWVuXzNfMTUzNjA4NzY0NF8wMzU/screen-3.jpg?fakeurl=1&type=.jpg',
-    price:14,
+    price:13,
     stock:true
   },
   {
@@ -1244,7 +1244,7 @@ let DB = {
     name:'Office 365',
     emoji:'📊',
     img:'https://tse1.mm.bing.net/th/id/OIP.e8Ekjj8h2r79W-8si7iXngHaGF?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
-    price:55,
+    price:50,
     stock:true
   },
   {
@@ -1252,7 +1252,7 @@ let DB = {
     name:'Capcut',
     emoji:'✂️',
     img:'https://tse3.mm.bing.net/th/id/OIP.2x9yFDmKMjXkh8MTrM903QHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
-    price:28,
+    price:25,
     stock:true
   },
   {
@@ -1304,7 +1304,7 @@ let DB = {
     emoji:'👥',
     img:'https://t.tudocdn.net/691406',
     price:12,
-    stock:true
+    stock:false
   },
 
      {
@@ -1312,8 +1312,8 @@ let DB = {
     name:'GROK IA',
     emoji:'👥',
     img:'https://www.trecebits.com/wp-content/uploads/2025/03/grok-logo-ia.jpg.webp',
-    price:32,
-    stock:true
+    price:35,
+    stock:false
   }  ,
 
      {
@@ -1322,7 +1322,7 @@ let DB = {
     emoji:'👥',
     img:'https://assets.goal.com/images/v3/blt077eff519e5ab803/DAZN-Logo.jpg?auto=webp&format=pjpg&width=3840&quality=60',
     price:18,
-    stock:true
+    stock:false
   }  
 
    
@@ -2065,7 +2065,8 @@ function filterNisp(cat,btn){nispFilter=cat;document.querySelectorAll('.cat-btn'
 function getNispUnit(id){return (nispQty[id]?.unit)||'cajon'}
 function setNispUnit(id,unit){nispQty[id]=nispQty[id]||{qty:0,unit:'cajon'};nispQty[id].unit=unit;renderNispero(nispFilter)}
 function nispKgPrice(p){
-  return p.priceKg || p.kgPrice || Number((((Number(p.price) || 0) / 13) + 1).toFixed(2))
+  return p.priceKg || p.kgPrice ||
+    Math.ceil((((Number(p.price) || 0) / 13) + 1) * 10) / 10
 }
 function nispQtyVal(id){return nispQty[id]?.qty||0}
 function renderNispero(cat){
